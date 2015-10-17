@@ -5,7 +5,7 @@ class Video(models.Model):
     org_url  = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
 
-    def __unicode__():
+    def __unicode__(self):
             return self.title
 
 
@@ -15,5 +15,5 @@ class Dubs(models.Model):
     dub_file = models.FileField()
     dubbed_language = models.CharField(max_length=255)
 
-    def __unicode__():
+    def __unicode__(self):
             return self.dubbed_title

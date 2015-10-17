@@ -6,23 +6,31 @@
   </head>
 
   <body>
+    {% block content %}
+
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-8">
           <form>
 
             {% csrf_token %}
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
-              <span class="input-group-addon" id="basic-addon2">@example.com</span>
-            </div>
 
+            <div class="input-group" style="margin:0 auto;">
+
+              <input type="text" class="form-control" placeholder="Paste YouTube URL here" aria-describedby="basic-addon2">
+              <span class="input-group-addon" id="basic-addon2">Go!</span>
         </form>
       </div>
     </div>
+  </div>
+  <br/>
+    <div class="col-md-8">
+      <audio controls>
+        <source="#" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+    {% endblock %}
+
   </body>
 </html>
-
-
-
-{% block content %}
-{% endblock %}
